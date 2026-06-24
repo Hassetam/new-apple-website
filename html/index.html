@@ -18,7 +18,10 @@
         <header class="header-wrapper">
             <div class="internal-wrapper">
                 <div class="header-links-wrapper">
-                    <ul>
+                    <div class="menu-icon">
+    <i class="fa fa-bars"></i>
+</div>
+                    <ul id="nav-menu">
                         <li class="logo-link"><a href="index.html"> <img src="../images/icons/logo.png" alt="Apple Logo""> </a> </li>
                         <li><a href=" #">Store</a></li>
                         <li><a href="#">Mac</a></li>
@@ -44,7 +47,7 @@
 
         <div class="hero-content">
 
-            <div class="model">
+            <div class="model" >
                 Apple Worldwide Developers Conference.
             </div>
 
@@ -65,7 +68,7 @@
         <div class="internal-wrapper">
             <div class="title-wrapper">
                 <h1>iPhone 17 Pro</h1>
-                <h3>All out Pro.</h4>
+                <h4>All out Pro.</h4>
             </div>
 
             <div class="buttons-wrapper">
@@ -96,7 +99,7 @@
 
             <div class="description-wrapper">
                 <h1>Apple for College</h1>
-                <p>Mac and ipad.MAjor in any field</p>
+                <p>Mac and ipad. Major in any field</p>
             </div>
             <div class="buttons-wrapper">
                 <button>Learn more </button>
@@ -159,7 +162,7 @@
             </div>
 
             <div class="light-text">
-                Limitations and spend requirements apply.
+                Limitations and spend requirements apply.<sup>1</sup>
             </div>
 
             <div class="buttons-wrapper">
@@ -173,7 +176,7 @@
                 <img src="../images/pictures/trade-in-logo.png">
             </div>
             <div class="description-wrapper">
-                Get up to $195-$695 <br> in credit when you trade <br> iPhone 13 or higher.
+                Get up to $195-$695 <br> in credit when you trade <br> iPhone 13 or higher.<sup>2</sup>
             </div>
             <div class="buttons-wrapper">
                 <button class="btn-blue">Get your estimate</button>
@@ -182,9 +185,6 @@
 
         </div>
     </section>
-
-
-
 
     <footer class="footer-wrapper">
         <div class="internal-wrapper">
@@ -371,4 +371,14 @@
             </div>
         </div>
     </footer>
+
+    <script>
+const menuIcon = document.querySelector(".menu-icon");
+const navMenu = document.querySelector("#nav-menu");
+
+menuIcon.addEventListener("click", function() {
+    navMenu.classList.toggle("active");
+});
+</script>
+
 </body>

@@ -9,7 +9,7 @@ img {
 
 body {
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 /* Header */
@@ -67,43 +67,39 @@ body {
     padding: 12px 0 10px;
 }
 
+/*hamburger*/
+
+.menu-icon{
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 
 
 
 /* Main Highlight */
 
 .main-highlight-wrapper{
-
     height: 600px;
-    
     background-image:
     url("../images/pictures/hero_wwdc_teaser_startframe.jpg");
-
     background-repeat: no-repeat;
-
     background-position: center top;
-
     background-size: contain;
-
     background-color: black;
-
     position: relative;
 }
 
 .hero-content{
-
     position: absolute;
-
     bottom: 40px;
     line-height: 0.5;
     left: 50%;
-
     transform: translateX(-50%);
-
     text-align: center;
-
     color: white;
-
     width: 100%;
 }
 
@@ -118,19 +114,12 @@ body {
 }
 
 .buttons-wrapper button{
-
     background: #0071e3;
-
     color: white;
-
     border: none;
-
     border-radius: 20px;
-
     padding: 12px 24px;
-
     font-size: 17px;
-
     cursor: pointer;
 }
 
@@ -150,13 +139,9 @@ body {
   justify-content: center;
   color: rgb(204, 200, 200);
   text-align: center;
-  padding: 40px 0;
+  padding-bottom: 300px;
 }
 
-
-.internal-wrapper {
-  margin-bottom: 400px;
-}
 
 
 .title-wrapper {
@@ -169,7 +154,7 @@ body {
   padding: 12px 28px;
   margin: 0 10px;
   border: none;
-  border-radius: 30px;           /* pill shape */
+  border-radius: 30px;           
   font-size: 16px;
   cursor: pointer;
 }
@@ -234,7 +219,12 @@ body {
     max-width: 430px;
     margin: 0 auto;
     padding: 10px;
-    font-size: 15px;
+    font-size: 20px;
+}
+
+.light-text{
+    font-size: 10px;
+    color: #515154;
 }
 
 .fourth-highlight-wrapper .right-side-wrapper {
@@ -386,5 +376,141 @@ body {
 .footer-country a:hover {
     text-decoration: underline;
 }
+
+/* responsiveness for header navavigation*/
+
+/*hamburger for phone sizes*/
+@media (max-width: 768px) {
+
+    .internal-wrapper {
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        padding: 10px 20px;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        background: rgb(30, 29, 29);
+    }
+
+    #nav-menu.active {
+        padding-left: 100px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+}
+
+/* tablet size */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    .internal-wrapper {
+        width: 95%;
+    }
+
+    .header-wrapper {
+        font-size: 0.65em;
+    }
+
+    .header-wrapper .header-links-wrapper ul li {
+        padding: 14px 4px 8px;
+    }
+
+}
+
+/* Responsiveness for phone size- the whole body */
+
+@media (max-width: 768px) {
+    .internal-wrapper {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .fourth-highlight-wrapper,
+    .fifth-highlight-wrapper,
+    .sixth-highlight-wrapper {
+        flex-direction: column;
+    }
+
+    .left-side-wrapper,
+    .right-side-wrapper {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .title-wrapper h1 {
+        font-size: 32px;
+    }
+
+    .title-wrapper h3 {
+        font-size: 20px;
+    }
+
+    .description-wrapper {
+        font-size: 16px;
+    }
+
+    .main-highlight-wrapper,
+    .second-highlight-wrapper,
+    .third-highlight-wrapper {
+        height: 500px;
+    }
+
+    .buttons-wrapper button {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .copyright-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+     .main-highlight-wrapper {
+        background-size: contain;
+    }
+
+    .footer-wrapper {
+        font-size: 0.5em;
+    }
+
+    .footer-links-wrapper h3 {
+        font-size: 10px;
+    }
+
+    .footer-wrapper ul li {
+        font-size: 0.85em;
+    }
+
+    .hero-content {
+    bottom: 10px;
+    line-height: 0.8;
+    }
+
+  .second-highlight-wrapper {
+    background-image: url(../images/pictures/hero_iphone_17_pro_big.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}
+
+
+
+ 
 
 
